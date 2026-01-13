@@ -1,0 +1,169 @@
+/* =========================
+   Global variables
+   ========================= */
+
+:root{
+  --bg: #f6f7f8;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+
+  --accent: #166534;        /* deeper green */
+  --accent-soft: #e7f5ec;   /* soft green tint */
+}
+
+/* =========================
+   Reset & base
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* =========================
+   Typography
+   ========================= */
+h1, h2, h3 {
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.section-title {
+  color: var(--accent);
+}
+
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 6px;
+}
+
+p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+strong {
+  color: var(--text);
+}
+
+/* =========================
+   Links
+   ========================= */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Layout helpers
+   ========================= */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 18px;
+}
+
+/* =========================
+   Cards / surfaces
+   ========================= */
+.card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* Subtle hover (optional but nice) */
+.card:hover{
+  transform: translateY(-2px);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.12);
+}
+
+/* =========================
+   Header & Footer defaults
+   ========================= */
+.site-header,
+.site-footer {
+  background: var(--surface);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* =========================
+   Utility
+   ========================= */
+.lead {
+  font-size: 1.05rem;
+  max-width: 70ch;
+}
+
+/* =========================
+   Sticky footer layout
+   ========================= */
+html,body {
+  height: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+}
+
+.home-inner {
+  width: 100%;
+  max-width: 720px;
+  padding-top: 40px;
+}
+
+/* Center the grid itself */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
