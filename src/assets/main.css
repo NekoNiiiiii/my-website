@@ -191,3 +191,12 @@ footer.site-footer {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+/* Make footer text flush-left to the viewport (not centered container) */
+.site-footer .container {
+  max-width: none;
+  margin: 0;              /* remove centering */
+  padding-left: 18px;     /* keep a little breathing room */
+  padding-right: 18px;
+}
+
