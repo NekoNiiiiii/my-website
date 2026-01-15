@@ -194,9 +194,6 @@ import farmToolImg from "../assets/projects/farm-tool.png";
   cursor: zoom-in;
 }
 
-.content {
-  padding: 18px;
-}
 
 .heading {
   display: flex;
@@ -296,4 +293,21 @@ import farmToolImg from "../assets/projects/farm-tool.png";
     justify-content: flex-start;
   }
 }
+
+/* =========================
+   FIX: remove forced full-height flex layout
+   (this is what creates the huge blank gap)
+   ========================= */
+
+.page {
+  display: block !important;
+  min-height: auto !important;
+}
+
+/* If main was being stretched by flex */
+.page > .content,
+.page > main.content {
+  flex: initial !important;
+}
+
 </style>

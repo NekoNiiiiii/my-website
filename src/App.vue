@@ -1,9 +1,11 @@
 <template>
-  <div class="app">
+  <div class="page">
     <Header />
-    <main class="container content">
+
+    <main class="content">
       <router-view />
     </main>
+
     <Footer />
   </div>
 </template>
@@ -12,3 +14,7 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 </script>
+
+
+
+
